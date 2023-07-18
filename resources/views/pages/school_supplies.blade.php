@@ -15,13 +15,13 @@
                     <span class="badge text-bg-light rounded-pill align-text-bottom">27</span>
                 </a> --}}
 
-                    <a class="nav-link" href="#">هواتف</a>
-                    <a class="nav-link" href="#">كمبيوترات</a>
-                    <a class="nav-link" href="#">لابتوبات</a>
-                    <a class="nav-link" href="#">ساعات ذكية</a>
-                    <a class="nav-link" href="#">اكسسورات</a>
-                    <a class="nav-link" href="#">قطع غير </a>
-                    <a class="nav-link" href="#">اضافات</a>
+                    <a class="nav-link" href="#">حقائئب </a>
+                    <a class="nav-link" href="#">كتوب</a>
+                    <a class="nav-link" href="#">كراسات</a>
+                    <a class="nav-link" href="#">اقلام </a>
+                    <a class="nav-link" href="#">ادوات </a>
+                    <a class="nav-link" href="#">ملابس</a>
+                    <a class="nav-link" href="#">اكسسوارات</a>
                 </nav>
             </div>
         </div>
@@ -40,7 +40,7 @@
                         $informtion = $info->fetchAll();
                         $all = count($informtion);
                         for ($i = 0; $i <= $all; $i++) {
-                            $get_info = "SELECT * FROM `prodect` WHERE typ='electronic' AND id=" . $i . ';';
+                            $get_info = "SELECT * FROM `prodect` WHERE typ='school_supplies' AND id=" . $i . ';';
                             $info = $db->prepare($get_info);
                             $info->execute();
                             $informtion = $info->fetchAll();

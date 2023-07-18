@@ -7,9 +7,9 @@
                         <div class="products ">
                             <h5 class="lead mx-4 bulde">المنتجات</h5>
                             <ul class="navbar-nav my-1">
-                                <li class="nav-item"><a class="nav-link" href="{{ $page2 }}">الموضة</a></li>
+                                {{-- <li class="nav-item"><a class="nav-link" href="{{ $page2 }}">الموضة</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ $page6 }}">موبايلات</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ $page4 }}">الاكترونية</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ $page4 }}">الاكترونية</a></li> --}}
                                 </li>
                             </ul>
                         </div>

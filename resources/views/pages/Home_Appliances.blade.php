@@ -3,9 +3,39 @@
     {{ $page_titl }}
 @stop
 @section('body')
+
     <section class="pro">
-        <div class="container d-flex align-items-center">
-            <div class="row ustify-content-sm-center d-flex  ">
+
+        <div class="nav-scroller bg-body shadow-sm">
+            <div class="container">
+                <nav class="nav" aria-label="Secondary navigation">
+                    {{-- <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                <a class="nav-link" href="#">
+                    Friends
+                    <span class="badge text-bg-light rounded-pill align-text-bottom">27</span>
+                </a> --}}
+
+                    <a class="nav-link" href="#">افران كهربائي</a>
+                    <a class="nav-link" href="#">مصابيح اضاعة</a>
+                    <a class="nav-link" href="#">ثلاجات</a>
+                    <a class="nav-link" href="#">غسالات</a>
+                    <a class="nav-link" href="#">مكاوي</a>
+                    <a class="nav-link" href="#">سرائر</a>
+                    <a class="nav-link" href="#">حافظات</a>
+                    <a class="nav-link" href="#">كراسي </a>
+                    <a class="nav-link" href="#">طرابيز</a>
+                    <a class="nav-link" href="#">ادراج</a>
+                    <a class="nav-link" href="#">ادوات مائدة</a>
+                    <a class="nav-link" href="#">اغطية</a>
+                    <a class="nav-link" href="#">اجهزات تبريد و تكيف</a>
+                    <a class="nav-link" href="#">ادات زينة </a>
+                    <a class="nav-link" href="#">ادوات مكاتب</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container  align-items-center">
+            <div class="row ustify-content-sm-center   ">
                 @php
                     $db_info = 'mysql:host=localhost;dbname=myshop';
                     $db_user = 'root';
@@ -17,8 +47,8 @@
                         $info->execute();
                         $informtion = $info->fetchAll();
                         $all = count($informtion);
-                        for ($i = 0; $i < $all + 1; $i++) {
-                            $get_info = "SELECT * FROM `prodect` WHERE typ='Home_Appliances'AND id=" . $i . ';';
+                        for ($i = 0; $i <= $all; $i++) {
+                            $get_info = "SELECT * FROM `prodect` WHERE typ='Home_Appliances' AND id=" . $i . ';';
                             $info = $db->prepare($get_info);
                             $info->execute();
                             $informtion = $info->fetchAll();
@@ -32,14 +62,15 @@
                                 if ($value[1] != '') {
                                     if ($value[1] != '') {
                                         echo "
-                <div class='col-lg-3 col-md-6 d-flex flex-column justify-content-center'>
+                <div class='col-sm-6 col-md-4  col-lg-3   d-flex flex-column '>
                     <div class='prod' >
-                        <div class='card d-flex' >
+                        <div class='card ' >
                             <img class='card-img-top' src='/img/" .
                                             $pro_img .
                                             "' alt=\"" .
                                             $pro_img .
-                                            "\"' alt='Card image cap'>
+                                            "\"' alt='Card image cap'  style='max-height: 250px;
+                                            min-height: 250px; width=100%'>
                             <div class='card-body'>
                                 <h5 class='card-title'>" .
                                             $titl .

@@ -18,10 +18,10 @@
                     <a class="nav-link" href="#">هواتف</a>
                     <a class="nav-link" href="#">كمبيوترات</a>
                     <a class="nav-link" href="#">لابتوبات</a>
-                    <a class="nav-link" href="#">ساعات ذكية</a>
-                    <a class="nav-link" href="#">اكسسورات</a>
-                    <a class="nav-link" href="#">قطع غير </a>
-                    <a class="nav-link" href="#">اضافات</a>
+                    <a class="nav-link" href="#">ساعات</a>
+                    <a class="nav-link" href="#">رقاقات</a>
+                    <a class="nav-link" href="#">اجهزة شبكة</a>
+                    <a class="nav-link" href="#">اخر</a>
                 </nav>
             </div>
         </div>
@@ -40,7 +40,7 @@
                         $informtion = $info->fetchAll();
                         $all = count($informtion);
                         for ($i = 0; $i <= $all; $i++) {
-                            $get_info = "SELECT * FROM `prodect` WHERE typ='electronic' AND id=" . $i . ';';
+                            $get_info = "SELECT * FROM `prodect` WHERE typ='agricultural_tools' AND id=" . $i . ';';
                             $info = $db->prepare($get_info);
                             $info->execute();
                             $informtion = $info->fetchAll();

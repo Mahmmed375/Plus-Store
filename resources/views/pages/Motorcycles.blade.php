@@ -15,13 +15,13 @@
                     <span class="badge text-bg-light rounded-pill align-text-bottom">27</span>
                 </a> --}}
 
-                    <a class="nav-link" href="#">هواتف</a>
-                    <a class="nav-link" href="#">كمبيوترات</a>
-                    <a class="nav-link" href="#">لابتوبات</a>
-                    <a class="nav-link" href="#">ساعات ذكية</a>
+                    <a class="nav-link" href="#">درجات جديدة</a>
+                    <a class="nav-link" href="#">درجات مستعملة</a>
+                    <a class="nav-link" href="#">قطع غيار</a>
+                    <a class="nav-link" href="#">ملحقات</a>
                     <a class="nav-link" href="#">اكسسورات</a>
-                    <a class="nav-link" href="#">قطع غير </a>
                     <a class="nav-link" href="#">اضافات</a>
+                    <a class="nav-link" href="#">ادوات مساعدة</a>
                 </nav>
             </div>
         </div>
@@ -40,7 +40,7 @@
                         $informtion = $info->fetchAll();
                         $all = count($informtion);
                         for ($i = 0; $i <= $all; $i++) {
-                            $get_info = "SELECT * FROM `prodect` WHERE typ='electronic' AND id=" . $i . ';';
+                            $get_info = "SELECT * FROM `prodect` WHERE typ='Motorcycles' AND id=" . $i . ';';
                             $info = $db->prepare($get_info);
                             $info->execute();
                             $informtion = $info->fetchAll();
